@@ -6,7 +6,7 @@ RUN dpkg --add-architecture i386 \
         ca-certificates \
 				curl
 
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_19.x | bash -
 RUN apt-get install -y nodejs --no-install-recommends --no-install-suggests
 
 
