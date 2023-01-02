@@ -28,8 +28,9 @@ ENV APPS="csgo:740:730"
 ENV KEEPCOUNT=3
 
 RUN apt-get install -y --no-install-recommends --no-install-suggests \
-			lib32gcc1 \
-			rsync
+			lib32gcc-s1 \
+			rsync \
+			lib32stdc++6
 
 WORKDIR /steamcmd
 
