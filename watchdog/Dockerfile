@@ -29,8 +29,7 @@ ENV KEEPCOUNT=3
 
 RUN apt-get install -y --no-install-recommends --no-install-suggests \
 			lib32gcc-s1 \
-			rsync \
-			lib32stdc++6
+			rsync
 
 WORKDIR /steamcmd
 
