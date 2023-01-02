@@ -28,6 +28,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ./Dockerfile
+          file: watchdog/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/srcdocks:${{github.ref_name }}
