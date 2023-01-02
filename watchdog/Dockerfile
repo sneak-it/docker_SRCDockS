@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim as NODE
+FROM debian:bullseye-slim as node
 
 RUN dpkg --add-architecture i386 \
 		&& apt-get update \
@@ -11,7 +11,7 @@ RUN apt-get install -y nodejs --no-install-recommends --no-install-suggests
 
 
 
-FROM NODE AS NODE_MODULES
+FROM node AS node_modules
 
 WORKDIR /INSTALL
 COPY ./watchdog/*.* ./
@@ -19,7 +19,7 @@ RUN npm install --only=production
 
 
 
-FROM NODE
+FROM node
 
 ENV SM_VERSION=1.11
 ENV MM_VERSION=1.11
@@ -44,7 +44,7 @@ VOLUME ["/repo"]
 WORKDIR /watchdog
 
 COPY ./watchdog/*.js ./
-COPY --from=NODE_MODULES /INSTALL/node_modules/ ./node_modules/
+COPY --from=node_modules /INSTALL/node_modules/ ./node_modules/
 
 # Cleanup
 # RUN apt-get remove --purge -y apt-transport-https lsb-release gnupg \
