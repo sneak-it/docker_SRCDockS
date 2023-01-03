@@ -3,8 +3,6 @@ name: Docker Image CI
 on:
   push:
     branches: [ "njs19" ]
-  pull_request:
-    branches: [ "njs19" ]
 
 jobs:
   push_to_registry:
