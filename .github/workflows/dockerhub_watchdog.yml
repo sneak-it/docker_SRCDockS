@@ -32,5 +32,5 @@ jobs:
           context: .
           file: watchdog/Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/srdocks:latest,${{ secrets.DOCKER_USERNAME }}/srdocks:watchdog
           labels: ${{ steps.meta.outputs.labels }}
