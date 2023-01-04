@@ -30,7 +30,5 @@ jobs:
           context: .
           file: watchdog/Dockerfile
           push: true
-          tags: |
-            type=raw,value=latest
-            type=raw,value=watchdog
+          tags: snksrv/srcdocks:latest,snksrv/srcdocks:watchdog
           labels: ${{ steps.meta.outputs.labels }}
