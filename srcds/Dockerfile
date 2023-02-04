@@ -1,4 +1,4 @@
-FROM debian:buster-slim as ENTRYPOINT
+FROM debian:buster-slim@sha256:25ab4ba4a3fe99e4e1329292b3d93a6c51b5cf4f0525d8408713fc3522d120f5 as ENTRYPOINT
 
 RUN apt-get update \
 		&& apt-get install -y \
