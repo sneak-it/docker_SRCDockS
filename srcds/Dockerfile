@@ -8,7 +8,7 @@ COPY ./srcds/main.cpp ./
 RUN gcc -o main main.cpp
 
 
-FROM debian:buster-slim
+FROM debian:buster-slim@sha256:25ab4ba4a3fe99e4e1329292b3d93a6c51b5cf4f0525d8408713fc3522d120f5
 
 ENV APP_NAME=csgo
 ENV SRCDS_ARGS=""
